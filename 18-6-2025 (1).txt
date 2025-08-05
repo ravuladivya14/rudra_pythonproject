@@ -1,0 +1,313 @@
+L1=[['A','B','C],['D','E','F'],['G','H','I]]
+
+Ist_Output:
+========
+['A','B','C']
+A
+B
+C
+['D','E','F']
+D
+E
+F
+['G','H','I]
+G
+H
+I
+
+IInd_output:
+========
+A
+B
+C
+D
+E
+F
+G
+H
+I
+
+
+IIIrd_output:
+=========
+A  B  C  D  E  F  G H  I
+
+Ivth_output:
+========
+A  B  C
+D  E  F
+G H  I
+
+
+Ex1:
+===
+import time 
+L1=[['A','B','C'],['D','E','F'],['G','H','I']] 
+print(L1)
+print()
+for x1 in L1:
+    print(x1)
+    for x2 in x1:
+        print(x2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+L1=[['A','B','C'],['D','E','F'],['G','H','I']] 
+print(L1)
+print()
+for x1 in L1:
+    for x2 in x1:
+        print(x2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex3:
+==
+import time 
+L1=[['A','B','C'],['D','E','F'],['G','H','I']] 
+print(L1)
+print()
+for x1 in L1:
+    for x2 in x1:
+        print(x2,end=" ")
+print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+L1=[['A','B','C'],['D','E','F'],['G','H','I']] 
+print(L1)
+print()
+for x1 in L1:
+    for x2 in x1:
+        print(x2,end=" ")
+    print()
+print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+for x1 in range(1,11):
+    for y1 in range(1,11):
+        print(x1*y1,end=" ")
+    print() 
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+for x1 in range(1,11):
+    for y1 in range(1,11):
+        print(x1,"X",y1,"=",x1*y1)
+    print()
+print()
+time.sleep(2)
+print("End of an application")
+
+===================
+Pid  Pname  Price   Company
+====================
+101   A1         100            A11
+102   B1          200           B11
+103   C1          300           C11
+104   D1          400            D11
+==================
+
+Ex1:
+===
+import time 
+Pid=[]
+Pname=[] 
+Price=[] 
+Company=[] 
+n=eval(input('Enter the number of rows:'))
+for x1 in range(n):
+    obj1=int(input("Enter the Pid:"))
+    Pid.append(obj1)
+    obj2=input("Enter the Pname:")
+    Pname.append(obj2)
+    obj3=float(input("Enter the Price:"))
+    Price.append(obj3)
+    obj4=input("Enter the Company:")
+    Company.append(obj4)
+print()
+print("=============================")
+print("Pid","Pname","Price","Company")
+print("==============================")
+for x1,x2,x3,x4 in zip(Pid,Pname,Price,Company):
+    print(x1,x2,x3,x4)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+ABC
+abc
+
+A--a
+A--b
+A--c
+B--a
+B--b
+B--b
+C--a
+C--b
+C--c
+
+
+Ex1:
+===
+import time 
+str1=input("Enter the string_object:")
+str2=input("Enter the string_object:")
+for x1 in str1:
+    for x2 in str2:
+        print(x1,"==",x2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+->zip():
+=====
+      It is a predefine function in Python.The main objective of zip() function as follows
+
+                     ->It is used to convert one data structure into another one
+                     ->It is used to fetch more then two values
+
+
+Ex1:
+===
+import time 
+T1=(1001,1002,1003,1004,1005)
+print(T1," ",type(T1))
+print()
+L1=list(T1)
+print(L1," ",type(L1))
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex2:
+===
+import time 
+T1=(1001,1002,1003,1004,1005)
+T2=(2001,2002,2003,2004,2005)
+print(T1," ",T2)
+L1=list(T1,T2)
+print(L1)
+print()
+time.sleep(2)
+print("End of an application")
+
+OUTPUT:
+======
+C:\Users\Admin\Desktop>Python test1.py
+(1001, 1002, 1003, 1004, 1005)   (2001, 2002, 2003, 2004, 2005)
+Traceback (most recent call last):
+  File "test1.py", line 5, in <module>
+    L1=list(T1,T2)
+TypeError: list expected at most 1 arguments, got 2
+
+C:\Users\Admin\Desktop>
+
+
+Ex3:
+===
+import time 
+T1=(1001,1002,1003,1004,1005)
+T2=(2001,2002,2003,2004,2005)
+print(T1," ",T2)
+print()
+L1=list(zip(T1,T2))
+print(L1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex4:
+===
+import time 
+T1=(1001,1002,1003,1004,1005)
+T2=(2001,2002,2003,2004,2005)
+T3=(3001,3002,3003,3004,3005)
+print(T1," ",T2," ",T3)
+print()
+L1=list(zip(T1,T2,T3))
+print(L1)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex5:
+===
+import time 
+L1=["Pid","Pname","Price","Company"]
+L2=[1001,"Mobile_1",24000,"Samsung"]
+print()
+print(L1," ",L2)
+print()
+res1=dict(zip(L1,L2))
+print(res1)
+print()
+for a1,a2 in res1.items():
+    print(a1,"---",a2)
+print()
+time.sleep(2)
+print("End of an application")
+
+
+Ex6:
+===
+import time 
+import numpy as np 
+res1=np.array([[1,2,3],[4,5,6],[7,8,9]],ndmin=7)
+print("The result_set:",res1)
+print()
+print("The daimentions are:",res1.ndim)
+print()
+for x1 in res1:
+    for x2 in x1:
+        for x3 in x2:
+            for x4 in x3:
+                for x5 in x4:
+                    for x6 in x5:
+                        for x7 in x6:
+                            print(x7,end=' ')
+                        print()
+print()
+time.sleep(2)
+print("End of an application")
+
+
+
+
+
+
+
+
